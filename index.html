@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Psychological Perspectives II - Daily Lesson Plan 7</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        montanoBlue: '#1269A8',
+                        montanoYellow: '#F7D615',
+                        montanoGreen: '#54887D',
+                        montanoLightBlue: '#88B5C7',
+                        montanoOlive: '#A6B046',
+                        montanoBg: '#F2F5E9'
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F2F5E9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .tab-btn.active {
+            background-color: #1269A8;
+            color: #ffffff;
+            border-bottom: 4px solid #F7D615;
+            transform: translateY(-2px);
+        }
+        .board-card {
+            background: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            border: 2px solid #88B5C7;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800 flex flex-col justify-between p-2 md:p-6">
+
+    <!-- TOP HEADER / BANNER -->
+    <header class="board-card rounded-2xl p-4 md:p-6 mb-6 relative overflow-hidden bg-white">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 border-b-2 border-gray-100 pb-4">
+            <!-- Colegio Montano Branding -->
+            <div class="flex items-center gap-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyEop0yf6lZ7Jk9MILZxF1rBj4Oqs5esyhIQ&s" 
+                     alt="Colegio Montano Logo" 
+                     class="h-16 w-auto object-contain rounded-lg shadow-sm"
+                     onerror="this.src='https://placehold.co/120x60/1269A8/ffffff?text=Montano'">
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-montanoBlue tracking-tight">COLEGIO MONTANO</h1>
+                    <p class="text-xs md:text-sm font-semibold text-montanoGreen tracking-wide uppercase">Interactive Digital Classroom Board</p>
+                </div>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="flex items-center gap-3">
+                <button onclick="toggleFullScreen()" class="flex items-center gap-2 bg-montanoBlue hover:bg-opacity-90 text-white font-semibold py-2 px-4 rounded-xl shadow-md transition duration-200 text-sm">
+                    <i class="fa-solid fa-expand"></i>
+                    <span>Fullscreen</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Class Plan Metadata -->
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 mt-4 text-xs md:text-sm">
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Course</span>
+                <span class="font-semibold text-gray-700">Psychology</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Grade</span>
+                <span class="font-semibold text-gray-700">5to Mercadotecnia</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Unit / Plan</span>
+                <span class="font-semibold text-gray-700">Unit 1 - Plan #7</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Date</span>
+                <span class="font-semibold text-gray-700">March 1 - 5</span>
+            </div>
+            <div class="bg-blue-50 p-2.5 rounded-lg border border-blue-100 col-span-2 md:col-span-1">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Teacher</span>
+                <span class="font-semibold text-gray-700">Elysa López</span>
+            </div>
+            <div class="bg-yellow-50 p-2.5 rounded-lg border border-yellow-200 col-span-2 md:col-span-2">
+                <span class="block text-montanoBlue font-bold text-xs uppercase">Topic</span>
+                <span class="font-bold text-montanoBlue">Modern Psychological Perspectives II</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- PEDAGOGICAL ALIGNMENT COLLAPSIBLE SUMMARY -->
+    <section class="mb-6">
+        <details class="board-card rounded-2xl bg-white overflow-hidden group">
+            <summary class="p-4 font-bold text-montanoBlue cursor-pointer flex justify-between items-center bg-gray-50 hover:bg-gray-100 transition">
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-montanoOlive"></i>
+                    Pedagogical Framework & Institution Alignment (CNB Guatemala & Montano Habits)
+                </span>
+                <i class="fa-solid fa-chevron-down text-montanoBlue group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="p-5 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-gray-100 text-xs md:text-sm">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-montanoGreen flex items-center gap-1.5">
+                        <i class="fa-solid fa-bullseye"></i> CNB Competence & Achievement
+                    </h4>
+                    <p class="text-gray-600"><strong>Competence:</strong> Analyzes human behavior through Humanistic, Sociocultural, and Evolutionary lenses to evaluate market trends and ethical advertising practices.</p>
+                    <p class="text-gray-600"><strong>Learning Outcome:</strong> Differentiates self-actualization drives, cultural norms, and evolutionary survival triggers in consumer choices while critiquing marketing stereotypes.</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-montanoGreen flex items-center gap-1.5">
+                        <i class="fa-solid fa-brain"></i> Key Competencies & Montano Habits
+                    </h4>
+                    <p class="text-gray-600"><strong>Skills:</strong> Cross-Cultural Awareness, Ethical Reasoning, Analytical Evaluation, Social Influence Decoding.</p>
+                    <p class="text-gray-600"><strong>Montano Habits:</strong> <em>Seek First to Understand, Then to Be Understood</em> (respecting cultural perspectives) & <em>Think Win-Win</em> (designing ethical marketing strategies).</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-bold text-montanoGreen flex items-center gap-1.5">
+                        <i class="fa-solid fa-box-open"></i> Resources & Assessment
+                    </h4>
+                    <p class="text-gray-600"><strong>Resources:</strong> Digital Classroom Board, Case Study Cards, Ethical Checklist, Activity 3 Workshop Materials.</p>
+                    <p class="text-gray-600"><strong>3 Assessment Moments:</strong> Perspective Retrieval Practice (Initial), Cultural Belonging Analysis (Formative), Activity 3 Workshop & Plenary Rubric (Summative).</p>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <!-- MAIN PEDAGOGICAL SEQUENCE (TABS) -->
+    <main class="board-card rounded-2xl p-4 md:p-6 mb-6 bg-white flex-grow">
+        <!-- TAB NAVIGATION -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-6 border-b border-gray-200 pb-4">
+            <button onclick="switchTab(1)" id="tab-btn-1" class="tab-btn active p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage I (~5 min)</span>
+                <span><i class="fa-solid fa-rotate-left mr-1"></i> Retrieval Practice</span>
+            </button>
+            <button onclick="switchTab(2)" id="tab-btn-2" class="tab-btn p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage II (30 min)</span>
+                <span><i class="fa-solid fa-eye mr-1"></i> 3 New Lenses & Drivers</span>
+            </button>
+            <button onclick="switchTab(3)" id="tab-btn-3" class="tab-btn p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage III (15 min)</span>
+                <span><i class="fa-solid fa-[#1269A8] fa-people-group mr-1"></i> Culture & Belonging</span>
+            </button>
+            <button onclick="switchTab(4)" id="tab-btn-4" class="tab-btn p-3 rounded-xl font-bold text-sm md:text-base flex flex-col items-center justify-center gap-1 transition-all bg-gray-100 text-gray-700">
+                <span class="text-xs uppercase tracking-wider text-montanoYellow font-black">Stage IV (10 min)</span>
+                <span><i class="fa-solid fa-scale-balanced mr-1"></i> Ethics & Workshop #3</span>
+            </button>
+        </div>
+
+        <!-- TAB CONTENT CONTAINER -->
+        <div id="tab-contents">
+            <!-- STAGE I: RETRIEVAL PRACTICE -->
+            <div id="tab-1" class="tab-content space-y-6">
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-montanoBlue p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-montanoBlue mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-bolt text-montanoYellow"></i> Stage I: Retrieval Practice (~5 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm md:text-base">
+                        Quick retrieval challenge bridging Plan #6 (Biological, Behavioral, Cognitive, Psychodynamic) with today's new perspectives.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-montanoBlue uppercase">Retrieval Check 1</span>
+                            <p class="text-sm font-semibold text-gray-800 mt-2">Which perspective focuses on neurotransmitters, hormones, and physiological brain triggers?</p>
+                        </div>
+                        <button onclick="toggleAnswer('ret7-1')" class="mt-4 bg-montanoLightBlue text-white text-xs font-bold py-2 px-3 rounded hover:bg-montanoBlue transition">
+                            Check Answer
+                        </button>
+                        <div id="ret7-1" class="hidden mt-2 p-2 bg-blue-50 text-xs text-montanoBlue font-semibold rounded border border-blue-200">
+                            The Biological Perspective.
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-montanoBlue uppercase">Retrieval Check 2</span>
+                            <p class="text-sm font-semibold text-gray-800 mt-2">How does Cognitive Psychology explain why consumers compare product specifications?</p>
+                        </div>
+                        <button onclick="toggleAnswer('ret7-2')" class="mt-4 bg-montanoLightBlue text-white text-xs font-bold py-2 px-3 rounded hover:bg-montanoBlue transition">
+                            Check Answer
+                        </button>
+                        <div id="ret7-2" class="hidden mt-2 p-2 bg-blue-50 text-xs text-montanoBlue font-semibold rounded border border-blue-200">
+                            It views humans as information processors who use memory schemas and logical evaluation to make decisions.
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-montanoBlue uppercase">Retrieval Check 3</span>
+                            <p class="text-sm font-semibold text-gray-800 mt-2">What gap is left when we ignore culture, personal growth, and evolutionary survival?</p>
+                        </div>
+                        <button onclick="toggleAnswer('ret7-3')" class="mt-4 bg-montanoLightBlue text-white text-xs font-bold py-2 px-3 rounded hover:bg-montanoBlue transition">
+                            Check Answer
+                        </button>
+                        <div id="ret7-3" class="hidden mt-2 p-2 bg-blue-50 text-xs text-montanoBlue font-semibold rounded border border-blue-200">
+                            We miss how social identity, cultural norms, self-actualization, and ancestral adaptations influence choices!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE II: 3 NEW LENSES & DRIVERS -->
+            <div id="tab-2" class="tab-content hidden space-y-6">
+                <div class="bg-gradient-to-r from-emerald-50 to-teal-50 border-l-4 border-montanoGreen p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-montanoGreen mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-shapes"></i> Stage II: Direct Instruction - 3 Perspectives & Drivers (~30 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm">15 min Explaining Humanistic, Sociocultural & Evolutionary Perspectives | 15 min Needs, Values, Identity & Social Influence</p>
+                </div>
+
+                <!-- 3 Perspectives Breakdown -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm">
+                    <!-- Humanistic -->
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded text-xs uppercase">1. Humanistic</span>
+                            <h4 class="font-bold text-gray-800 text-base mt-2 flex items-center gap-1.5">
+                                <i class="fa-solid fa-seedling text-emerald-600"></i> Growth & Free Will
+                            </h4>
+                            <p class="text-gray-600 mt-2"><strong>Focus:</strong> Rogers & Maslow. Human potential, free will, self-actualization, personal values, and authenticity.</p>
+                            <p class="text-gray-500 mt-2"><strong>Market Trigger:</strong> Products framed around personal growth, wellness, and achieving full potential.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sociocultural -->
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded text-xs uppercase">2. Sociocultural</span>
+                            <h4 class="font-bold text-gray-800 text-base mt-2 flex items-center gap-1.5">
+                                <i class="fa-solid fa-users text-purple-600"></i> Culture & Conformity
+                            </h4>
+                            <p class="text-gray-600 mt-2"><strong>Focus:</strong> Vygotsky & Asch. Social norms, cultural context, peer influence, social identity, and traditions.</p>
+                            <p class="text-gray-500 mt-2"><strong>Market Trigger:</strong> Social proof, trend adoption, community belonging, and cultural rituals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Evolutionary -->
+                    <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded text-xs uppercase">3. Evolutionary</span>
+                            <h4 class="font-bold text-gray-800 text-base mt-2 flex items-center gap-1.5">
+                                <i class="fa-solid fa-dna text-amber-600"></i> Adaptation & Survival
+                            </h4>
+                            <p class="text-gray-600 mt-2"><strong>Focus:</strong> Darwinian principles. Natural selection, status signaling, mate attraction, resource security, and threat avoidance.</p>
+                            <p class="text-gray-500 mt-2"><strong>Market Trigger:</strong> Highlighting safety, dominance, status symbols, and scarcity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guided Interactive Quick-Check -->
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <h5 class="font-bold text-montanoBlue text-sm mb-2">Interactive Driver Identification:</h5>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-2 bg-white rounded border flex justify-between items-center">
+                            <span>"A teenager purchases a specific sneaker brand because all their classmates wear it to fit in."</span>
+                            <button onclick="toggleAnswer('drv-1')" class="bg-montanoLightBlue text-white px-2 py-1 rounded font-bold">Show Perspective</button>
+                        </div>
+                        <div id="drv-1" class="hidden p-2 bg-blue-50 text-montanoBlue font-semibold rounded">Sociocultural Perspective (Normative Social Influence & Conformity)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE III: CULTURE & BELONGING -->
+            <div id="tab-3" class="tab-content hidden space-y-6">
+                <div class="bg-gradient-to-r from-yellow-50 to-amber-50 border-l-4 border-montanoYellow p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-earth-americas text-montanoBlue"></i> Stage III: Culture & Belonging in Consumer Preferences (~15 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm">Analyzing how cultural values and group belonging shape brand loyalty and market acceptance.</p>
+                </div>
+
+                <!-- Case Study Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h4 class="font-bold text-montanoBlue text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-handshake font-black"></i> Collectivist vs. Individualist Markets
+                        </h4>
+                        <p class="text-gray-600"><strong>Individualist Cultures:</strong> Ads emphasize personal autonomy, standing out, and unique self-expression (Humanistic alignment).</p>
+                        <p class="text-gray-600 mt-2"><strong>Collectivist Cultures:</strong> Ads highlight family harmony, group benefit, and shared tradition (Sociocultural alignment).</p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                        <h4 class="font-bold text-montanoGreen text-base mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-[#54887D] fa-shield-halved"></i> Evolutionary Status Signaling
+                        </h4>
+                        <p class="text-gray-600">Why do luxury brands thrive across diverse cultures?</p>
+                        <p class="text-gray-600 mt-2">From an <strong>Evolutionary perspective</strong>, expensive goods act as costly signals of wealth, power, and genetic fitness, enhancing social rank within a group.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE IV: ETHICS & WORKSHOP #3 -->
+            <div id="tab-4" class="tab-content hidden space-y-6">
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-montanoOlive p-5 rounded-r-xl">
+                    <h3 class="text-xl font-bold text-montanoBlue mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-scale-balanced text-montanoYellow"></i> Stage IV: Ethical Marketing, Stereotypes & Activity 3 Workshop (~10 Minutes)
+                    </h3>
+                    <p class="text-gray-700 text-sm">5 min Discussion on Stereotypes & Ethics + 5 min Exit Ticket & Activity 3 Launch</p>
+                </div>
+
+                <!-- Ethical Marketing Breakdown -->
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <h4 class="font-bold text-montanoBlue text-base mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Ethics & Stereotypes in Advertising
+                    </h4>
+                    <p class="text-xs md:text-sm text-gray-700 mb-3">Sociocultural and Evolutionary triggers are powerful, but misusing them can reinforce harmful stereotypes or exploit psychological vulnerabilities.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="p-3 bg-red-50 rounded-lg border border-red-100">
+                            <strong class="text-red-800 block mb-1">Unethical Trap: Harmful Stereotyping</strong>
+                            <p class="text-gray-600">Reducing cultural groups or genders to oversimplified tropes to trigger quick emotional sales.</p>
+                        </div>
+                        <div class="p-3 bg-green-50 rounded-lg border border-green-100">
+                            <strong class="text-montanoGreen block mb-1">Ethical Standard: Montano Win-Win Marketing</strong>
+                            <p class="text-gray-600">Respecting cultural diversity, empowering personal growth, and avoiding fear-based evolutionary exploitation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity 3 Workshop Banner -->
+                <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-300 flex flex-col md:flex-row items-center justify-between gap-3">
+                    <div>
+                        <span class="bg-montanoYellow text-montanoBlue font-black text-xs px-2.5 py-1 rounded uppercase tracking-wide">Workshop Checkpoint</span>
+                        <h4 class="font-bold text-montanoBlue mt-1">Activity 3 Workshop: Deconstructing Campaign Stereotypes</h4>
+                        <p class="text-xs text-gray-600">In pairs, analyze your assigned print/digital ad. Identify sociocultural cues and redesign any unethical stereotypes.</p>
+                    </div>
+                    <i class="fa-solid fa-pen-ruler text-3xl text-montanoBlue"></i>
+                </div>
+
+                <!-- Exit Ticket -->
+                <div class="bg-blue-50 p-5 rounded-xl border border-montanoLightBlue">
+                    <h4 class="font-bold text-montanoBlue text-sm mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-ticket"></i> 5-Minute Exit Ticket Prompt (Individual Submission)
+                    </h4>
+                    <p class="text-xs md:text-sm text-gray-700">Write 1 sentence: <strong>"How can a marketer leverage the Sociocultural perspective ethically without falling into cultural stereotyping?"</strong></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- INTERACTIVE PLENARY EVALUATION RUBRIC -->
+    <section class="board-card rounded-2xl p-4 md:p-6 bg-white">
+        <h3 class="text-lg font-bold text-montanoBlue mb-4 flex items-center gap-2 border-b pb-2">
+            <i class="fa-solid fa-clipboard-check text-montanoGreen"></i> Plenary Evaluation Rubric (Interactive Scoring Tool for Teacher)
+        </h3>
+        
+        <div class="overflow-x-auto">
+            <table class="w-full text-xs md:text-sm text-left border-collapse">
+                <thead class="bg-gray-100 text-montanoBlue uppercase font-bold text-xs">
+                    <tr>
+                        <th class="p-3 border">Criteria</th>
+                        <th class="p-3 border">Needs Improvement (1 pt)</th>
+                        <th class="p-3 border">Satisfactory (2 pts)</th>
+                        <th class="p-3 border">Exemplary (3 pts)</th>
+                        <th class="p-3 border text-center">Interactive Score</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y text-gray-700">
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">1. Perspective Mastery</td>
+                        <td class="p-3 border">Confuses Humanistic, Sociocultural, and Evolutionary tenets.</td>
+                        <td class="p-3 border">Explains perspectives accurately with minor conceptual overlap.</td>
+                        <td class="p-3 border">Demonstrates sharp distinction between self-actualization, cultural norms, and evolutionary triggers.</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">2. Ethical & Cultural Critique</td>
+                        <td class="p-3 border">Fails to identify stereotypes or ethical violations in ads.</td>
+                        <td class="p-3 border">Identifies basic stereotypes in marketing examples.</td>
+                        <td class="p-3 border">Critically evaluates stereotyping and proposes robust, ethical alternative campaign strategies.</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">3. Workshop & Collaboration</td>
+                        <td class="p-3 border">Incomplete participation in Activity 3 Workshop.</td>
+                        <td class="p-3 border">Collaborated on workshop tasks with basic team engagement.</td>
+                        <td class="p-3 border">Demonstrated exceptional teamwork and ethical reasoning (Habits: Synergize & Think Win-Win).</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 font-bold border bg-gray-50">4. Plenary Communication</td>
+                        <td class="p-3 border">Unclear presentation of workshop findings.</td>
+                        <td class="p-3 border">Presents workshop conclusions clearly using standard vocabulary.</td>
+                        <td class="p-3 border">Delivers articulate, persuasive presentation with precise psychological and marketing terms.</td>
+                        <td class="p-3 border text-center">
+                            <select onchange="calculateRubricScore()" class="rubric-score bg-blue-50 border border-blue-200 rounded p-1 font-bold text-montanoBlue">
+                                <option value="1">1 pt</option>
+                                <option value="2">2 pts</option>
+                                <option value="3" selected>3 pts</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Rubric Total Result -->
+        <div class="mt-4 flex justify-between items-center bg-montanoBg p-3 rounded-xl border border-montanoOlive">
+            <span class="font-bold text-montanoBlue text-sm">Total Team Assessment Score:</span>
+            <span id="rubric-total" class="text-lg font-black text-montanoBlue bg-white px-4 py-1 rounded-lg border border-gray-200">12 / 12 pts</span>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-6 text-center text-xs text-gray-500 py-2">
+        Colegio Montano &copy; 2026 | Pedagogical Digital Board System | Model CNB Guatemala
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Tab Navigation Switcher
+        function switchTab(tabIndex) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(`tab-${tabIndex}`).classList.remove('hidden');
+            document.getElementById(`tab-btn-${tabIndex}`).classList.add('active');
+        }
+
+        // Toggle Hidden Solution / Content Accordion
+        function toggleAnswer(id) {
+            const el = document.getElementById(id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+
+        // Fullscreen Toggle Functionality
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log(`Error attempting to enable full-screen mode: ${err.message}`);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        // Rubric Calculation Logic
+        function calculateRubricScore() {
+            const selects = document.querySelectorAll('.rubric-score');
+            let total = 0;
+            selects.forEach(select => {
+                total += parseInt(select.value, 10);
+            });
+            document.getElementById('rubric-total').innerText = `${total} / 12 pts`;
+        }
+    </script>
+</body>
+</html>
